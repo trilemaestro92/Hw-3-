@@ -102,12 +102,7 @@ header {
    
 }
 
-.box:hover{
-    background-color: white;
-    transform: scale(1.1);
-    z-index: 1;
-    
-}
+
 .box{
     text-decoration: none;
     padding: 10px;
@@ -137,11 +132,10 @@ h2 {
 }
 
 main {
-   
     padding: 10px;
     color: white;
     display: grid;
-    grid-gap: 3px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr) ; 
     
@@ -152,6 +146,7 @@ main {
     height: 250px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     
 }
 
@@ -277,6 +272,14 @@ main {
         text-decoration: none;
         background-repeat: no-repeat;
         background-size: cover;
+        
+    }
+
+    .box:hover{
+        background-color: white;
+        transform: scale(1.1);
+        z-index: 1;
+        
     }
     
 
