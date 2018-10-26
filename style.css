@@ -17,7 +17,7 @@ body {
     border-bottom: 0.1px solid #B3B2B0; 
     position: fixed;
     background-color: #ffffff;
-    box-shadow: 2px 1px 10px 0px lightgrey;
+    
     
 } 
 
@@ -45,7 +45,7 @@ header {
     line-height: 40px;
 }
 
-
+/* .shadow */
 
 .bio-info {
     background-color: rgb(255, 255, 255);
@@ -64,7 +64,8 @@ header {
     
     font-family: "EB Garamond";
     line-height: 25px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
     color: #333333;
     display: flex;
     justify-content: center;
@@ -85,15 +86,19 @@ header {
     
 }
 .box-header {
-    font-family: "EB Garamond";
-    font-size: 1.3em;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
     padding: 10px;
     color: #20201E;
     background-color: white;
     border-bottom: 2px dotted black;
     
     
+    
    
+}
+.box{
+    text-decoration: none;
 }
 
 h1 {
@@ -143,36 +148,37 @@ main {
 
 
 .project1 {
-    background-image: url(assets/lake.jpg);
+    background-image: url(assets/todoproject.JPG);
+    
 }
 
 .project2 {
-    background-image: url(assets/empire.jpg);
+    background-image: url();
 }
 
 .project3 {
-    background-image: url(assets/person.jpg);
+    background-image: url();
 }
 
 .project4 {
     
-    background-image: url(assets/tree.jpg);
+    background-image: url();
 }
 
 .project5 {
-    background-image: url(assets/geo.jpg);
+    background-image: url();
 }
 
 .project6 {
-    background-image: url(assets/sand.jpg);
+    background-image: url();
 }
 
 .project7 {
-    background-image: url(assets/bridge.jpg);
+    background-image: url();
 }
 
 .project8 {
-    background-image: url(assets/lens.jpg);
+    background-image: url();
 }
 
 
@@ -182,6 +188,7 @@ main {
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: 2px 1px 10px 0px lightgrey;
     
     
   }
@@ -234,7 +241,7 @@ main {
         grid-row: 1;
         display: flex;
         justify-content: flex-end;
-        margin-right: 50px;
+        padding-right: 50px;
 
     }
    
@@ -247,7 +254,10 @@ main {
 
     
     .box {
-        height: 300px;
+        height: 350x;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
 
