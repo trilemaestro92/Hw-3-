@@ -1,5 +1,6 @@
 body {
     background-color: rgb(255, 255, 255);
+    background-image: url(assets/seigaiha.png);
     
 }
 *, *:after, *:before {
@@ -7,6 +8,7 @@ body {
     -moz-box-sizing: border-box;
     box-sizing:border-box;
 }
+
 
 .sticky {
   min-width: 440px;
@@ -80,6 +82,7 @@ header {
 
 .bio-info {
     background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 1px 2px lightgrey;
     display: grid;
     grid-column: repeat (4, 1fr);
     grid-row: 1fr 1fr;
@@ -91,11 +94,14 @@ header {
     display: none;
 }
 
+.bio-heading{
+    font-family: "EB Garamond";
+}
 .about-me {
     
     font-family: "EB Garamond";
     line-height: 25px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     color: #333333;
     display: flex;
@@ -184,15 +190,15 @@ main {
 
 
 .project1 {
-    background-image: url(assets/todoproject.JPG);
-    
+    background-image: url(assets/todosocket.JPG);
+    box-shadow: 0px 1px 1px 2px lightgrey;
    
     
 }
 
 .project2 {
     background-image: url(assets/yelp\ clone.JPG);
-
+    box-shadow: 0px 1px 1px 2px lightgrey;
 }
 
 .project3 {
