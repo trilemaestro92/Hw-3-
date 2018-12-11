@@ -154,13 +154,6 @@ header {
    
 }
 
-/* .bio-heading {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    font-weight: bold;
-
-} */
 
 .box{
     text-decoration: none;
@@ -211,6 +204,9 @@ main {
 }
 
 
+.icon:hover {
+    opacity: 0.5;
+}
 
 
 .project1 {
