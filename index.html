@@ -29,8 +29,6 @@
                 <h1>Tri Nguyen</h1>
                 <h2>Web Developer</h2>
             </header>
-
-
             <!--Social Links-->
             <div class="links">
                 <a href="https://github.com/trilemaestro92" class="icon git" target="_blank">
@@ -53,6 +51,10 @@
             </div>
         </div>
     </div>
+    <div id="alert1" class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Copied <strong>Trihuynguyen14@gmail.com</strong> to clipboard.
+          </div>
     <div class="bio-info">
 
         <div class="pic two">
@@ -166,7 +168,8 @@
             selection.removeAllRanges();
             selection.addRange(range);
             document.execCommand("copy");
-            alert("Copied " + txt.innerText + " to Clipboard");
+            document.getElementById("alert1").style.display = 'block';
+            // alert("Copied " + txt.innerText + " to Clipboard");
         }
     </script>
 </body>
