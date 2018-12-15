@@ -29,28 +29,32 @@
                 <h1>Tri Nguyen</h1>
                 <h2>Web Developer</h2>
             </header>
-
-
             <!--Social Links-->
             <div class="links">
-                <a href="https://github.com/trilemaestro92" class="icon" target="_blank">
+                <a href="https://github.com/trilemaestro92" class="icon git" target="_blank">
                     <img class="social" src="assets/github.png" alt="github">
                 </a>
 
-                <a href="#" class="icon">
+                <a href="#" class="icon over">
                     <img class="social" src="assets/overflow.png" alt="overflow">
                 </a>
 
-                <a href="https://www.linkedin.com/in/tri-nguyen-a31b5b69/" class="icon" target="_blank">
+                <a href="https://www.linkedin.com/in/tri-nguyen-a31b5b69/" class="icon linked" target="_blank">
                     <img class="social" src="assets/linkedin.png" alt="linkedin">
                 </a>
 
-                <a href="#" class="icon">
+                <a href="" onclick="copyEmail(event)" onmouseover="myEmail(event)" onmouseout="removeEmail(event)"
+                    class="icon email">
                     <img class="social" src="assets/envelope.png" alt="gmail">
                 </a>
+                <span id="gmail" class="iconText">Trihuynguyen14@gmail.com</span>
             </div>
         </div>
     </div>
+    <div id="alert1" class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Copied <strong>Trihuynguyen14@gmail.com</strong> to clipboard.
+          </div>
     <div class="bio-info">
 
         <div class="pic two">
@@ -61,19 +65,23 @@
                 <div class="carousel-item active">
                     <h3 class="bio-heading">About Me</h3>
                     <p class="about-me">
-                            My name is Tri Nguyen, an eploxer. When I am not functioning as an responsible adult in the modern world. I spend most of
-                            my time engage in outdoor activities like playing basketball, soccer, or going on walks with my dog. Outside
-                            of that, I'm always keen in researching ways I can improve my health, mind, and well being.
-                            <br>
-                            <br> I got my Bachelor of Business in Marketing from Georgia State University. Looking ahead, I'd like to explore
-                            the possibilities this coding Bootcamp has to offer and fully gain as much coding knowledge as possible. Check out my work!
-                        </p>
+                        My name is Tri Nguyen, an eploxer. When I am not functioning as an responsible adult in the
+                        modern world. I spend most of
+                        my time engage in outdoor activities like playing basketball, soccer, or going on walks with my
+                        dog. Outside
+                        of that, I'm always keen in researching ways I can improve my health, mind, and well being.
+                        <br>
+                        <br> I got my Bachelor of Business in Marketing from Georgia State University. Looking ahead,
+                        I'd like to explore
+                        the possibilities this coding Bootcamp has to offer and fully gain as much coding knowledge as
+                        possible. Check out my work!
+                    </p>
                 </div>
                 <div class="carousel-item">
                     <h3 class="bio-heading">Skills</h3>
                     <br>
                     <p class="about-me">
-                        Javascript/HTML5/CSS
+                        Javascript/HTML5/CSS3
                         <br>
                         jQuery
                         <br>
@@ -104,7 +112,7 @@
         <!--Profile Info-->
 
 
-        <a href="https://todo-socket.herokuapp.com/" target="_blank" class="box project1">
+        <a href="https://todo-sql-socket.herokuapp.com/" target="_blank" class="box project1">
             <h3 class="box-header">
                 Todo-List (Socket.io)
 
@@ -120,16 +128,19 @@
 
         </a>
 
-        <a href="#" class="box project3">
+        <a href="https://facebell.herokuapp.com/" class="box project3">
             <h3 class="box-header">
-                Upcoming Projects.....
-
+                Face Bell
             </h3>
 
         </a>
 
+        <a href="#" class="box project4">
+            <h3 class="box-header">
+                Upcoming Project .....
+            </h3>
 
-
+        </a>
 
     </main>
 
@@ -140,6 +151,27 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script>
+        function myEmail(event) {
+            document.getElementById("gmail").style.visibility = "visible";
+        }
+        function removeEmail(event) {
+            document.getElementById("gmail").style.visibility = "hidden";
+        }
+
+        function copyEmail(event) {
+            event.preventDefault();
+            let selection = window.getSelection();
+            let txt = document.getElementById("gmail");
+            let range = document.createRange();
+            range.selectNodeContents(txt);
+            selection.removeAllRanges();
+            selection.addRange(range);
+            document.execCommand("copy");
+            document.getElementById("alert1").style.display = 'block';
+            // alert("Copied " + txt.innerText + " to Clipboard");
+        }
+    </script>
 </body>
 
 </html>
