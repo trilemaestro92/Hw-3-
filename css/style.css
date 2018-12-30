@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(255, 255, 255);
-    background-image: url(assets/seigaiha.png);
+    background-color: #f7f7f7;
+  
 }
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
@@ -9,12 +9,12 @@ body {
 }
 
 .sticky {
-  min-width: 440px;
-  background-color: rgb(255, 255, 255);
+  min-width: 150px;
   position: sticky;
   top: -20px; 
   z-index: 1;
   -webkit-backface-visibility: hidden;
+  background-color: #f7f7f7;
 }
 
 .sticky::before,
@@ -33,7 +33,7 @@ body {
 
 /* COVER */
 .sticky::after {
-  background: linear-gradient(white 10%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 70%, transparent);
+  background: linear-gradient(#f7f7f7 100%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 70%, transparent);
   top: 0;
   z-index: 1;
 }
@@ -41,10 +41,10 @@ body {
 .head {
     width: 100%;
     display: grid;
-    grid-template-rows: repeat (3, 1fr);
+    grid-template-rows: 180px 60px 30px 170px;
     grid-template-columns: 1fr;
     position: fixed;
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     position: sticky;
     top: 0px;
     margin-top: -16px;
@@ -61,7 +61,7 @@ body {
 
 .tri {
     object-fit: cover;
-    height: 150px;
+    height: 130px;
     border: 1px solid #ffffff;
     box-shadow: 0px 4px 6px 2px lightgrey;
     border-radius: 50%;
@@ -71,9 +71,8 @@ body {
 header {
     margin: 30px 0 30px 20px;
     line-height: 40px;
+    grid-row:4;
 }
-
-/* .shadow */
 
 .bio-info {
     background-color: rgb(255, 255, 255);
@@ -86,9 +85,6 @@ header {
     z-index: 5;  
 }
 
-.two {
-    display: none;
-}
 
 .carousel-control-next-icon , .carousel-control-prev-icon{
     background-color: rgb(78, 78, 78);
@@ -96,11 +92,21 @@ header {
     opacity: .20;
     height: 50px;
 }
+.carousel-control-next{
+    right:-35%;
+}
+.carousel-control-prev{
+    left:-35%;
+}
 
 .carousel-inner{
     overflow: visible;
 }
 
+.carousel-item {
+   border: .5px outset;
+   box-shadow: 10px 10px 0 rgba(220,220,220,0.5);
+}
 .bio-heading{
     font-family: "EB Garamond";
     display: flex;
@@ -128,87 +134,61 @@ header {
 }
 
 .social {
-    margin-top: 20px;
-    margin-left: 20px; 
-}
-.box-header {
-    font-family: Helvetica, sans-serif;
-    font-size: 1.3em;
-    font-weight: 600px;
-    color: #20201E;
-    background-color: white;
-    border: 1px solid rgb(31, 31, 31); 
-    border-radius: 5px;
-    text-align: center;
-    padding: 3px;   
+    margin-top: 18px;
+    margin-left: 10px; 
 }
 
-.box{
-    text-decoration: none;
-    padding: 10px;
-    background-size: cover;
-}
 
 h1 {
     
     font-family: "Oswald";
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 10px;
+    text-shadow: 7px 7px 0 #dee2e6;
 }
 
 h2 {
     font-family:'Montserrat', sans-serif;
-    font-size: 3em;
+    font-size: 1.3em;
     color: #B3B2B0;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    text-shadow: 7px 7px 0 #dee2e6;
+    display: flex;
+    justify-content: center;
 }
 
-main {
-    min-width: 440px;
-    padding: 10px;
-    color: white;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr) ; 
-}
 
-.box {
-    height: 250px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .icon:hover {
-    opacity: 0.5;
+    transform: scale(.9);
+    text-decoration: none;
+}
+.social{
+    font-family: "Font Awesome 5 Brands";
+    font-size: 26px;
+    color: #333333;
 }
 .iconText {
-    display: none;
-    visibility: hidden;
-    width: 120px;
-    background-color: #333333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    border: 1.25px groove;
-    background-color: ghostwhite;
-    color: #20201E;
-    padding: 5px 0;
-    font-family: 'helvetica';
-    font-size: 15px;
+    font-family: "Bit Light10 (sRB)";
+    font-size: 11.5px;
+    font-weight: bold;
+    visibility: visible;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
 }
 
 .alert {
     display: none;
     min-width: 440px;
+    content: attr('Trihuynguyen14@gmail.com') ;
     font-family: Helvetica, sans-serif;
     padding: 20px;
     background-color: tomato;
@@ -218,8 +198,7 @@ main {
 strong{
     font-weight: bold;
 }
-  
-  .closebtn {
+.closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -230,48 +209,101 @@ strong{
     transition: 0.3s;
   }
   
-  .closebtn:hover {
+.closebtn:hover {
     color: black;
-  }
-
-.project1 {
-    background-image: url(assets/todo.JPG);
-    background-size: cover;
-    background-position: right;
-    box-shadow: 0px 1px 1px 2px lightgrey;
 }
 
-.project2 {
-    background-image: url(assets/yelpclone.JPG);
-    box-shadow: 0px 1px 1px 2px lightgrey;
+.email{
+    display: inherit;
+    visibility: hidden;
+}
+.posts{
+    display:none;
+}
+.protect{
+    display:none;
 }
 
-.project3 {
-    background-image: url(assets/faceBell.png);
-    background-size: 270px;
-    box-shadow: 0px 1px 1px 2px lightgrey;
-}
 
-.project4 {
+
+@media only screen and (min-width: 300px){
+    .head {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 90px 50px 7px 70px;
+        grid-template-columns: 1fr;
+        position: fixed;
+        background-color: #f7f7f7;
+        position: sticky;
+        top: 0px;
+        margin-top: -16px;
+        z-index: 3;
+    }
+    .pic{
+        height:100px
+    }
+    .tri {
+        height: 85px;
+        padding: .3rem;
+    }
     
-    background-image: url();
+    header {
+        margin: 10px 0 0px 10px;
+        line-height: 25px;
+        
+    }
+    .links{
+        height:35px;
+    }
+    
+    .social {
+        margin-left: 20px; 
+        font-size: 22px
+    }
+    
+    
+    h1 {
+        font-size: 1.2em;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+        justify-content: flex-start;
+    }
+    
+
+    .alert {
+        display: none;
+        min-width: 440px;
+        font-family: Helvetica, sans-serif;
+        padding: 20px;
+        background-color: tomato;
+        color: white;
+        margin-bottom: 0px;
+      }
+    strong{
+        font-weight: bold;
+    }
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 24px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+    .closebtn:hover {
+        color: black;
+    }   
+   
+   
 }
 
-.project5 {
-    background-image: url();
-}
-
-.project6 {
-    background-image: url();
-}
-
-.project7 {
-    background-image: url();
-}
-
-.project8 {
-    background-image: url();
-}
 
 
 @media only screen and (min-width: 600px) { 
@@ -283,13 +315,15 @@ strong{
 
     header {
         grid-column: span 2;
+        grid-row:1;
+        margin: 30px 0 30px 20px;
+        line-height: 40px;
     }
-
+   
     .bio-info {
         padding-top: 80px;
         justify-content: center;
-        grid-template-rows: 180px 350px;
-        grid-template-columns: 600px;
+        align-content: center;
     }
 
     .carousel{
@@ -311,21 +345,39 @@ strong{
         grid-row: 1;
         height: 100px;
         justify-content: flex-end;
-        padding-right: 20px;
+        margin: 5px 20px;
         display: grid;
-        grid-template-rows: 50px 30px;
-        grid-template-columns: repeat(50px, 1fr);
+        grid-template-rows: 40px;
+        grid-template-columns: repeat(5, 40px);
+        grid-gap: 3px;
     }  
 
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .email{
+        display: inherit;
+        visibility: visible;
+    }
+    #gmail{
+    visibility: hidden;
+    grid-area: 1 / 5 / auto / auto;
+    height: 25px;
+    display: flex;
+    align-self: center;
+    padding: 5px;
+    }
     .social{
-        margin-top: 20px;
+        margin-top:0px;
         margin-left: 0px;
+        height: 24px;
     }
 
     .git {
        grid-row: 1;
        grid-column: 1;
-       align-items: center;
       }
 
     .over {
@@ -337,31 +389,22 @@ strong{
         grid-row: 1;
         grid-column: 3;  
     }
-
     .iconText {
-        grid-column-start: 1;
-        grid-column-end: 5;
+        display: none;
+        visibility: hidden;
+        width: 180px;
+        background-color: #333333;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        border: 1.25px groove;
+        background-color: ghostwhite;
+        color: #333;
+        padding: 5px 0;
+        font-size: 13px;
         grid-row: 2;
-        width: 200px;
-        display: inherit;
-      }
-
-    main {
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2, 1fr); 
-    padding: 50px 140px 140px 140px;
-    }
-    .box {
-        height: 350x;
-        text-decoration: none;
-        background-repeat: no-repeat;     
-    }
-    .box:hover{
-        background-color: rgba(255, 255, 255, 0.178);
-        transform: scale(1.1);
-        z-index: 1;
-        text-decoration: none;
-    }
+        margin-left: 10px;
+    } 
     .sticky {
         min-width: 153px;
         z-index: 2;
@@ -375,7 +418,12 @@ strong{
       .sticky::after {
         z-index: 3;
       }
+      h1{
+          font-size: 2em;
+      }
       h2 {
+          font-size:3em;
           min-width: 600px;
       }
+     
 }
