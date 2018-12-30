@@ -231,7 +231,6 @@ var stepcarousel={
 			$controls.css({cursor:'pointer'})
 			config.$paginatediv.bind('click', function(e){
 				var $target=$(e.target)
-				console.log($target)
 				if ($target.is('img') && $target.attr('data-over')){
 					stepcarousel.stepTo(config.galleryid, parseInt($target.attr('data-moveto'))+1)
 				}
