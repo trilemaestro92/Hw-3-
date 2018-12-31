@@ -83,7 +83,7 @@
     display: block;
     width: 179px;
     height: 210px;
-    padding: 20px;
+    padding: 17px;
     border-bottom: 1px solid #cecece;
 }
 
@@ -197,23 +197,23 @@
     text-align: left;
 }
 .pic2 {
-    width: 120px;
+    width: 104px;
     float: left;
-    padding: 20px;
+    padding: 15px;
     border-right: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
 }
 .infoBlock{
     float: left;
     height: 120px;
-    width: 438px;
+    width: 558px;
 }
 .blocka, .blockb{
     font-family: "Bit Light10 (sRB)";
     font-size: 11px;
     text-align: left;
     float: left;
-    width: 219px;
+    width: 279px;
     height: 39.5px;
     line-height: 40px;
     padding: 0 16px;
